@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Postavljanje metapodataka za karakter set i prikaz na mobilnim uređajima -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Naslov stranice i povezivanje s eksternom CSS datotekom -->
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Glavni kontejner za kontakt formu -->
+    <div class="contact-container">
+    
+        <!-- Forma za slanje poruke -->
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+        
+            <!-- Naslov i linija ispod naslova -->
+            <div class="contact-left-title">
+                <h2>Get in touch</h2>
+                <hr>
+            </div>
+            
+            <!-- Skriveno polje za ključ pristupa za slanje podataka putem Web3Forms API-ja -->
+            <input type="hidden" name="access_key" value="34291c7e-8b03-4993-9f6f-6110fefaadff">
+            
+            <!-- Polje za unos imena -->
+            <input type="text" name="name" placeholder="Vase ime" class="contact-inputs" required>
+            
+            <!-- Polje za unos e-mail adrese -->
+            <input type="email" name="email" placeholder="Vas email" class="contact-inputs" required>
+            
+            <!-- Polje za unos poruke -->
+            <textarea name="message" placeholder="Vasa poruka" class="contact-inputs" required></textarea>
+            
+            <!-- Gumb za slanje forme -->
+            <button type="submit">Podnesi <img src="assets/arrow_icon.png" alt=""></button>
+
+        </form>
+        
+        <!-- Desni dio koji sadrži sliku -->
+        <div class="contact-right">
+            <img src="assets/right_img.png" >
+        </div>
+        
+    </div>
+    
+</body>
+</html>

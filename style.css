@@ -1,0 +1,109 @@
+/* Resetiranje stilova na svim elementima */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Osnovni stil za tijelo dokumenta */
+body{
+    font-family: 'Outfit'; /* Postavljanje fonta za tijelo dokumenta */
+    background: linear-gradient(#ffdad5, #fff7f9); /* Postavljanje pozadinske slike kao linearnog gradijenta */
+}
+
+/* Stil za glavni kontejner kontakt forme */
+.contact-container{
+    height: 100vh; /* Postavljanje visine na 100% visine preglednika */
+    display: flex; /* Postavljanje fleksibilnog prikaza elemenata */
+    align-items: center; /* Centriranje elemenata po vertikali */
+    justify-content: space-evenly; /* Jednako raspoređivanje elemenata po horizontali */
+}
+
+/* Stil za lijevi dio kontakt forme */
+.contact-left{
+    display: flex; /* Postavljanje fleksibilnog prikaza elemenata unutar kontakt-left */
+    flex-direction: column; /* Postavljanje smjera redoslijeda elemenata na vertikalni */
+    align-items: start; /* Postavljanje poravnanja elemenata prema početku */
+    gap: 20px; /* Postavljanje razmaka između elemenata */
+}
+
+/* Stil za naslov lijevog dijela kontakt forme */
+.contact-left-title h2{
+   font-weight: 600; /* Postavljanje debljine fonta */
+   color: #a363aa; /* Postavljanje boje teksta */
+   font-size: 40px; /* Postavljanje veličine fonta */
+   margin-bottom: 5px; /* Postavljanje margine na dnu */
+}
+
+/* Stil za liniju ispod naslova lijevog dijela kontakt forme */
+.contact-left-title hr{
+    border: none; /* Uklanjanje granica */
+    width: 120px; /* Postavljanje širine linije */
+    height: 5px; /* Postavljanje debljine linije */
+    background-color: #a343aa; /* Postavljanje boje pozadine linije */
+    border-radius: 10px; /* Postavljanje radijusa ruba linije */
+    margin-bottom: 20px; /* Postavljanje margine na dnu */
+}
+
+/* Stil za unosne polje u lijevom dijelu kontakt forme */
+.contact-inputs{
+    width: 400px; /* Postavljanje širine unosa */
+    height: 50px; /* Postavljanje visine unosa */
+    border: none; /* Uklanjanje granica */
+    outline: none; /* Uklanjanje vanjskog okvira na fokusu */
+    padding-left: 25px; /* Dodavanje unutarnjeg razmaka s lijeve strane */
+    font-weight: 500; /* Postavljanje debljine fonta */
+    color: #666; /* Postavljanje boje teksta */
+    border-radius: 50px; /* Postavljanje radijusa ruba */
+}
+
+/* Stil za višeredno tekstualno polje u lijevom dijelu kontakt forme */
+.contact-left textarea{
+    height: 140px; /* Postavljanje visine višerednog polja */
+    padding-top: 15px; /* Dodavanje unutarnjeg razmaka na vrhu */
+    border-radius: 20px; /* Postavljanje radijusa ruba */
+}
+
+/* Stil za unosno polje na fokusu u lijevom dijelu kontakt forme */
+.contact-inputs:focus{
+    border: 2px solid #ff994f; /* Postavljanje granica na fokusu */
+}
+
+/* Stil za tekst unutar placeholdera u unosnom polju lijevog dijela kontakt forme */
+.contact-inputs::placeholder{
+    color: #a9a9a9; /* Postavljanje boje teksta placeholdera */
+}
+
+/* Stil za gumb u lijevom dijelu kontakt forme */
+.contact-left button{
+    display: flex; /* Postavljanje fleksibilnog prikaza elemenata unutar gumba */
+    align-items: center; /* Centriranje elemenata po vertikali unutar gumba */
+    padding: 15px 30px; /* Postavljanje unutarnjeg razmaka unutar gumba */
+    font-size: 16px; /* Postavljanje veličine fonta unutar gumba */
+    color: #fff; /* Postavljanje boje teksta unutar gumba */
+    gap: 10px; /* Postavljanje razmaka između elemenata unutar gumba */
+    border: none; /* Uklanjanje granica */
+    border-radius: 50px; /* Postavljanje radijusa ruba gumba */
+    background: linear-gradient(270deg, #ff994f, #fa6d86); /* Postavljanje pozadinske slike kao linearnog gradijenta */
+    cursor: pointer; /* Postavljanje kursora na pokazivač */
+}
+
+/* Stil za sliku unutar gumba u lijevom dijelu kontakt forme */
+.contact-left button img{
+    height: 15px; /* Postavljanje visine slike unutar gumba */
+}
+
+/* Stil za sliku unutar desne strane kontakt forme */
+.contact-right img{
+    width: 500px; /* Postavljanje širine slike unutar desne strane */
+}
+
+/* Media query za ekrane s maksimalnom širinom od 800 piksela */
+@media (max-width:800px){
+    .contact-inputs{
+        width: 80vw; /* Postavljanje širine unosa na 80% širine preglednika */
+    }
+    .contact-right{
+        display: none; /* Skrivanje desnog dijela na ekranima s maksimalnom širinom od 800 piksela */
+    }
+}
